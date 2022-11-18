@@ -145,7 +145,11 @@ root.resizable(False, False)
 root.geometry("275x350")
 root.title("SCPList")
 root.config(bg="light blue")
-root.iconbitmap("images.ico")
+
+try:
+    root.iconbitmap("images.ico")
+except tk.TclError:
+    print("Test")
 
 lst = tk.Listbox(root, width = 24, height=11)
 
